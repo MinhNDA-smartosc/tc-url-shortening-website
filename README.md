@@ -4,7 +4,7 @@ Using TypeScript and React, your challenge is to build out a URL shortening web 
 
 ### Brief
 
-URL shortening is a technique on the Web in which a Uniform Resource Locator (URL) may be made substantially shorter and still direct to the required page. This is achieved by using a redirect that links to the web page that has a long URL. For example, the URL "https://example.com/assets/category_B/subcategory_C/Foo/" can be shortened to "https://example.com/Foo", and the URL "http://example.com/about/index.html" can be shortened to "https://goo.gl/aO3Ssc ".
+URL shortening is a technique on the Web in which a Uniform Resource Locator (URL) may be made substantially shorter and still direct to the required page. This is achieved by using a redirect that links to the web page that has a long URL. For example, the URL "https://example.com/assets/category_B/subcategory_C/Foo/" can be shortened to "https://cleanuri.com/WAsdZXC".
 
 Your challenge is to build out this landing page, integrate with the [cleanURI API](https://cleanuri.com/docs) and get it looking as close to the design as possible.
 
