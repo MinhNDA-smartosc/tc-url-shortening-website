@@ -18,8 +18,7 @@
   --Grayish-Violet: hsl(257, 7%, 63%);
   --Very-Dark-Blue: hsl(255, 11%, 22%);
   --Very-Dark-Violet: hsl(260, 8%, 14%);
-  /**/
-  --Cyan-hover: hsla(180, 66%, 49%, 0.76);
+  --Cyan-hover: hsla(180, 79%, 76%, 0.76);
 }
 
 @theme {
@@ -30,6 +29,8 @@
   --color-white: var(--White);
   --color-grayish-violet: var(--Grayish-Violet);
   --color-very-dark-blue: var(--Very-Dark-Blue);
+  --color-very-dark-violet: var(--Very-Dark-Violet);
+  --color-cyan-hover: var(--Cyan-hover);
 }
 
 * {

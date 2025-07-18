@@ -1,11 +1,14 @@
 import { Header } from "./components";
 import { Footer } from "./components/Footer/Footer";
+import { HeroSection } from "./components/HeroSection";
+import { ShortenUrlForm } from "./components/Form/ShortenUrlForm";
 
 function App() {
   return (
     <div className="min-h-screen">
       <Header />
-      <h1 className="text-3xl font-bold underline bg-red-50">Hello World</h1>
+      <HeroSection />
+      <ShortenUrlForm />
       <Footer />
     </div>
   );

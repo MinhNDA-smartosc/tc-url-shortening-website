@@ -77,7 +77,7 @@ export const Header = () => {
           </ul>
           <div className="nav-buttons flex flex-col w-full items-center border-t border-gray pt-5 gap-4">
             {ACTION_LINKS.map((action) => (
-              <a key={action.label} href={action.href} className={`w-full text-center ${action.label === "Login" ? "text-white" : "px-8 py-3 bg-cyan text-white rounded-full font-bold hover:bg-cyan-hover transition-colors duration-300"}`}>
+              <a key={action.label} href={action.href} className={`w-full text-center ${action.label === "Login" ? "text-white" : "px-8 py-3 bg-red-100 text-white rounded-full font-bold hover:bg-red-100 transition-colors duration-300"}`}>
                 {action.label}
               </a>
             ))}

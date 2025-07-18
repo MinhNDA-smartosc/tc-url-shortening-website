@@ -13,7 +13,7 @@ export const AxiosService = {
     return await ApiClient.post(url, body, {
       ...config,
       headers: {
-        "Content-Type": "multipart/form-data",
+        "Content-Type": "application/x-www-form-urlencoded",
       },
     });
   },
