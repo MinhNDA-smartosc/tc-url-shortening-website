@@ -41,4 +41,19 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  max-width: 144rem !important;
+}
+
+.form-background {
+  background-image: url("./assets//images//bg-shorten-desktop.svg");
+  background-size: cover;
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+
+.getStarted-background {
+  background-image: url("./assets/images/bg-boost-desktop.svg");
+  background-size: cover;
+  background-position: left top;
+  background-repeat: no-repeat;
 }

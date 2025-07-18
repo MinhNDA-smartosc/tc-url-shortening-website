@@ -11,10 +11,14 @@ export const useShortenURL = () => {
   const {
     register,
     handleSubmit,
+    control,
     formState: { errors },
     reset,
   } = useForm<FormData>({
     resolver: zodResolver(schema),
+    defaultValues: {
+      url: "",
+    },
   });
 
   const mutation = useMutation({
@@ -32,5 +36,6 @@ export const useShortenURL = () => {
     handleSubmit,
     errors,
     mutation,
+    control,
   };
 };

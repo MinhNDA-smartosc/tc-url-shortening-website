@@ -1,7 +1,4 @@
-import { Header } from "./components";
-import { Footer } from "./components/Footer/Footer";
-import { HeroSection } from "./components/HeroSection";
-import { ShortenUrlForm } from "./components/Form/ShortenUrlForm";
+import { Header, Footer, HeroSection, ShortenUrlForm, StatSection, GetStarted } from "./components";
 
 function App() {
   return (
@@ -9,6 +6,8 @@ function App() {
       <Header />
       <HeroSection />
       <ShortenUrlForm />
+      <StatSection />
+      <GetStarted />
       <Footer />
     </div>
   );
