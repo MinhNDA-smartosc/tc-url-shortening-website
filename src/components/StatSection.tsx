@@ -15,7 +15,7 @@ export const StatSection = () => {
 
         {/* Card 1 */}
         <div className="relative bg-white rounded-lg pt-16 pb-6 px-6  text-center md:text-left shadow-md max-w-[40rem] w-full z-10 md:self-start">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 md:-top-10 md:left-8 md:grid place-content-center bg-[#3b3054] rounded-full w-20 h-20 p-2 flex justify-center items-center">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 md:top-[0.5rem] md:left-20 md:grid place-content-center bg-[#3b3054] rounded-full w-20 h-20 p-2 flex justify-center items-center">
             <img src={iconBrand} alt="icon brand recognition" className="w-12 h-12" />
           </div>
           <h3 className="font-bold text-lg mb-4">Brand Recognition</h3>
@@ -24,7 +24,7 @@ export const StatSection = () => {
 
         {/* Card 2 */}
         <div className="relative bg-white rounded-lg pt-16 pb-6 px-6 text-center md:text-left shadow-md max-w-[40rem] w-full z-10 md:mt-11">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 md:top-[0.5rem] md:left-8 md:grid place-content-center bg-[#3b3054] rounded-full w-20 h-20 p-2 flex justify-center items-center">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 md:top-[0.5rem] md:left-20 md:grid place-content-center bg-[#3b3054] rounded-full w-20 h-20 p-2 flex justify-center items-center">
             <img src={iconRecords} alt="icon detailed records" className="w-12 h-12" />
           </div>
           <h3 className="font-bold text-lg mb-4">Detailed Records</h3>
@@ -33,7 +33,7 @@ export const StatSection = () => {
 
         {/* Card 3 */}
         <div className="relative bg-white rounded-lg pt-16 pb-6 px-6 text-center md:text-left shadow-md max-w-[40rem] w-full z-10 md:mt-24">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 md:top-[0.3rem] md:left-8 md:grid place-content-center bg-[#3b3054] rounded-full w-20 h-20 p-2 flex justify-center items-center">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 md:top-[0.5rem] md:left-20 md:grid place-content-center bg-[#3b3054] rounded-full w-20 h-20 p-2 flex justify-center items-center">
             <img src={iconCustomizable} alt="icon fully customizable" className="w-12 h-12" />
           </div>
           <h3 className="font-bold text-lg mb-4">Fully Customizable</h3>
