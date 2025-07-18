@@ -41,14 +41,3 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
-
-.attribution {
-  font-size: .9rem;
-  text-align: center;
-  padding: 1.3rem;
-  background-color: var(--Gray);
-}
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
