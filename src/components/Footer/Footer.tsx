@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <>
       <footer className="pt-[4.4rem] px-[1.5rem] pb-[4rem] bg-[#232127]">
-        <div className="footer-section max-w-[69.375rem] mx-auto flex flex-col items-center text-center text-white gap-12 md:flex-row md:justify-between md:items-start md:text-left md:gap-[1.5rem] md:mx-[4rem]">
+        <div className="footer-section mx-auto flex flex-col items-center text-center text-white gap-12 md:flex-row md:justify-between md:items-start md:text-left md:gap-[1.5rem] md:mx-[4rem]">
           <a href="#">
             <img src={FooterLogo} alt="Shortly" />
           </a>

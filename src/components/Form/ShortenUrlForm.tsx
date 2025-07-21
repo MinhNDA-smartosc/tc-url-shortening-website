@@ -1,70 +1,13 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import { useShortenURL } from "../../hooks";
 import { Controller } from "react-hook-form";
 import { cn } from "../../libs/util";
 
-interface ShortLink {
-  original_link: string;
-  full_short_link: string;
-}
-
-// Define the possible response structure from the shorten API
-interface ShortenApiResponse {
-  result_url?: string;
-  short_url?: string;
-  data?: {
-    short_url?: string;
-  };
-}
-
 export const ShortenUrlForm: React.FC = () => {
-  const { control, handleSubmit, errors, mutation } = useShortenURL();
-  const [links, setLinks] = useState<ShortLink[]>([]);
-  const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
-  const error = mutation.isError ? (mutation.error as Error)?.message : null;
-  const loading = mutation.isPending;
-  const inputRef = useRef<HTMLInputElement | null>(null);
+  const { control, handleSubmit, errors, mutation, links, copiedIndex, handleCopyClick, inputRef, error, loading } = useShortenURL();
 
-  // Load links from localStorage on mount
-  useEffect(() => {
-    const stored = localStorage.getItem("shortenedLinks");
-    if (stored) {
-      setLinks(JSON.parse(stored));
-    }
-  }, []);
-
-  // Save links to localStorage whenever they change
-  useEffect(() => {
-    localStorage.setItem("shortenedLinks", JSON.stringify(links));
-  }, [links]);
-
-  // Handle form submit
   const onSubmit = (data: { url: string }) => {
-    mutation.mutate(data, {
-      onSuccess: (result: ShortenApiResponse) => {
-        // Try to get both original and short link from API response
-        const original = data.url;
-        const short = result?.result_url || result?.short_url || result?.data?.short_url;
-        if (short) {
-          setLinks((prev) => [{ original_link: original, full_short_link: short }, ...prev]);
-        }
-      },
-    });
-  };
-
-  // Handle copy button
-  const handleCopyClick = async (index: number) => {
-    const link = links[index].full_short_link;
-    try {
-      await navigator.clipboard.writeText(link);
-      setCopiedIndex(index);
-      setTimeout(() => setCopiedIndex(null), 1500);
-    } catch {
-      // fallback: select input
-      if (inputRef.current) {
-        inputRef.current.select();
-      }
-    }
+    mutation.mutate(data);
   };
 
   return (
@@ -90,7 +33,7 @@ export const ShortenUrlForm: React.FC = () => {
       <div className="shorter-container pt-24 md:pt-32 px-4 md:px-16 bg-[hsl(230,25%,95%)]">
         {links.length > 0 &&
           links.map((link, index) => (
-            <div key={index} className="shorter bg-white my-4 p-4 md:p-6 rounded-lg flex flex-col md:flex-row justify-between items-start md:items-center">
+            <div key={index} className="shorter bg-white mt-4 p-4 md:p-6 rounded-lg flex flex-col md:flex-row justify-between items-start md:items-center">
               <div className="shorter-original w-full md:w-[40vw] py-2">
                 <a href={link.original_link} target="_blank" rel="noopener noreferrer" className="shorter-originalLink text-[#3b3054] block no-underline pr-2 max-w-full break-all">
                   {link.original_link}
