@@ -43,6 +43,6 @@ This product is a URL shortening web application built with TypeScript and React
 
 ## Note on Libraries and Tools
 
-The project already leverages React, TypeScript, React Query, React Hook Form, and Zod for schema validation, among others.
+The project already leverages React, TypeScript, React Query, React Hook Form, among others.
 
 ---
