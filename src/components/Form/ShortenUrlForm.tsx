@@ -4,7 +4,7 @@ import { Controller } from "react-hook-form";
 import { cn } from "../../libs/util";
 
 export const ShortenUrlForm: React.FC = () => {
-  const { control, handleSubmit, errors, mutation, links, inputRef, error, loading } = useShortenURL();
+  const { control, handleSubmit, mutation, links, inputRef, loading } = useShortenURL();
 
   const onSubmit = (data: { url: string }) => {
     mutation.mutate(data);
@@ -16,21 +16,7 @@ export const ShortenUrlForm: React.FC = () => {
         <div className="form-container flex flex-col items-center w-full absolute top-0 -translate-y-1/2">
           <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col md:flex-row w-full bg-[#3b3054] p-6 md:p-12 rounded-lg form-background bg-no-repeat bg-right-top items-center gap-4 md:gap-8 relative">
             <div className="w-full relative text-left md:mr-5 mb-0 ">
-              <Controller
-                control={control}
-                name="url"
-                render={({ field }) => (
-                  <input
-                    id="link"
-                    type="text"
-                    placeholder="Shorten a link here..."
-                    className={cn("w-full p-3 text-lg rounded-lg border focus:outline-none bg-white placeholder-gray-400", errors.url || error ? "border-2 border-red-700 placeholder-red-500" : "border-none")}
-                    {...field}
-                    ref={inputRef}
-                  />
-                )}
-              />
-              {/* {errors.url ? <p className="error-text text-red-700 absolute mt-1 text-sm">{errors.url.message as string}</p> : error ? <p className="error-text text-red-700 absolute mt-1 text-sm">{error}</p> : null} */}
+              <Controller control={control} name="url" render={({ field }) => <input id="link" type="text" placeholder="Shorten a link here..." className={cn("w-full p-3 text-lg rounded-lg border focus:outline-none bg-white placeholder-gray-400")} {...field} ref={inputRef} />} />
             </div>
             <button className="primary-btn rounded-lg w-full md:w-[10rem] min-w-[120px] p-3 bg-cyan text-white text-lg font-bold transition-colors duration-300 hover:bg-cyan-hover whitespace-nowrap" type="submit" disabled={loading}>
               {loading ? "Loading..." : "Shorten It!"}

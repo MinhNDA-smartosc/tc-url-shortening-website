@@ -17,13 +17,7 @@ export const useShortenURL = () => {
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   // Form setup
-  const {
-    register,
-    handleSubmit,
-    control,
-    formState: { errors },
-    reset,
-  } = useForm<FormData>({
+  const { register, handleSubmit, control, reset } = useForm<FormData>({
     defaultValues: { url: "" },
   });
 
@@ -44,7 +38,6 @@ export const useShortenURL = () => {
   });
 
   // Error and loading helpers
-  const error = mutation.isError ? (mutation.error as Error)?.message : null;
   const loading = mutation.isPending;
 
   return {
@@ -52,9 +45,7 @@ export const useShortenURL = () => {
     inputRef,
     control,
     handleSubmit,
-    errors,
     mutation,
-    error,
     loading,
     register,
   };
