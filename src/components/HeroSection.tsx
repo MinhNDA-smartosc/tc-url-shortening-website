@@ -3,7 +3,7 @@ export const HeroSection = () => {
   return (
     <section className="flex flex-col md:flex-row-reverse overflow-x-hidden px-4 md:px-16 pt-12 pb-40 md:pb-40">
       <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-        <img src={HeroImage} width="733" height="482" alt="working illustration" className="block w-[125vw] md:w-full" />
+        <img src={HeroImage} width="733" height="482" alt="working illustration" className="block w-[125vw] md:w-full object-fill" />
       </div>
 
       <div className="w-full md:w-1/2 text-center md:text-left py-12 flex flex-col items-center md:items-start justify-center pr-0 md:pr-12">

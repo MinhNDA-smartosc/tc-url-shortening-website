@@ -45,7 +45,7 @@ body {
 }
 
 .form-background {
-  background-image: url("./assets//images//bg-shorten-desktop.svg");
+  background-image: url("./assets/images/bg-shorten-desktop.svg");
   background-size: cover;
   background-position: right top;
   background-repeat: no-repeat;

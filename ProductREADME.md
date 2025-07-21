@@ -8,6 +8,7 @@ This product is a URL shortening web application built with TypeScript and React
 
 - **Description:** Users must be able to input a URL and receive a shortened version using the CleanURI API.
 - **Reason for Priority:** This is the core feature; without it, the product does not fulfill its main purpose.
+- **Problems:** CleanURI having CORS error therefore we have to create an independent express project to use it
 
 ### 2. Persistence of Shortened Links
 

@@ -19,11 +19,20 @@ export const ShortenUrlForm: React.FC = () => {
               <Controller
                 control={control}
                 name="url"
-                render={({ field }) => <input id="link" type="text" placeholder="Shorten a link here..." className={cn("w-full p-3 text-lg rounded-lg border focus:outline-none bg-white", errors.url || error ? "border-2 border-red-500" : "border-none")} {...field} ref={inputRef} />}
+                render={({ field }) => (
+                  <input
+                    id="link"
+                    type="text"
+                    placeholder="Shorten a link here..."
+                    className={cn("w-full p-3 text-lg rounded-lg border focus:outline-none bg-white placeholder-gray-400", errors.url || error ? "border-2 border-red-700 placeholder-red-500" : "border-none")}
+                    {...field}
+                    ref={inputRef}
+                  />
+                )}
               />
-              {errors.url ? <p className="error-text text-red-500 absolute mt-1 text-sm">{errors.url.message as string}</p> : error ? <p className="error-text text-red-500 absolute mt-1 text-sm">{error}</p> : null}
+              {errors.url ? <p className="error-text text-red-700 absolute mt-1 text-sm">{errors.url.message as string}</p> : error ? <p className="error-text text-red-700 absolute mt-1 text-sm">{error}</p> : null}
             </div>
-            <button className="primary-btn rounded-lg w-full md:w-[15vw] min-w-[120px] p-3 bg-cyan text-white text-lg font-bold transition-colors duration-300 hover:bg-cyan-hover" type="submit" disabled={loading}>
+            <button className="primary-btn rounded-lg w-full md:w-[10rem] min-w-[120px] p-3 bg-cyan text-white text-lg font-bold transition-colors duration-300 hover:bg-cyan-hover whitespace-nowrap" type="submit" disabled={loading}>
               {loading ? "Loading..." : "Shorten It!"}
             </button>
           </form>
